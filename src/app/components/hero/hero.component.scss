@@ -38,6 +38,47 @@
   z-index: -1;
 }
 
+/* Hero Graphics */
+.HeroGraphics {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 20rem;
+}
+
+.FullstackDeveloper {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 50rem;
+  height: auto;
+  z-index: 2;
+  
+  // White SVG elements
+  path {
+    fill: var(--text-white);
+    fill-opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .FullstackDeveloper {
+    max-width: 30rem;
+    filter: blur(4px);
+  }
+}
+
+@media (max-width: 768px) {
+  .FullstackDeveloper {
+    max-width: 20rem;
+    //layer blur
+    filter: blur(4px);
+  }
+}
+
 /* Hero Content */
 .HeroContent {
   flex: 1;
@@ -45,6 +86,7 @@
   flex-direction: column;
   gap: 1.5rem;
   z-index: 2;
+  align-items: flex-start;
 }
 
 .HeroTitle {
@@ -52,18 +94,6 @@
   color: var(--text-white);
   margin: 0;
   line-height: 1.2;
-}
-
-.HeroName {
-  text-align: left;
-  text-shadow: -0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.74);
-  margin: 0;
-}
-
-@media (max-width: 1024px) {
-  .HeroName {
-    text-align: center;
-  }
 }
 
 .HeroDescription {
@@ -77,55 +107,50 @@
   }
 }
 
-/* Hero Graphics */
-.HeroGraphics {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  min-height: 20rem;
+.HeroName {
+  text-align: right;
+  text-shadow: -0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.74);
+  margin: 1rem 0 0 0;
+  align-self: flex-end;
 }
 
-.HeroImage {
-  width: 100%;
-  max-width: 35rem;
-  height: auto;
-  border-radius: var(--border-radius);
-  z-index: 1;
-}
-
-@media (max-width: 768px) {
-  .HeroImage {
-    max-width: 25rem;
+@media (max-width: 1024px) {
+  .HeroContent {
+    align-items: center;
   }
-}
-
-.FullstackDeveloper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  max-width: 30rem;
-  height: auto;
-  z-index: 2;
   
-  // White SVG elements
-  path {
-    fill: var(--text-white);
-    fill-opacity: 1;
-  }
-}
-
-@media (max-width: 768px) {
-  .FullstackDeveloper {
-    width: 80%;
-    max-width: 20rem;
+  .HeroName {
+    text-align: center;
+    align-self: center;
   }
 }
 
 /* Contact Button */
 .ContactButton {
   margin-top: 1rem;
+  align-self: flex-end;
 } 
+
+@media (max-width: 768px) {
+  .ContactButton {
+    align-self: center;
+  }
+}
+
+.HeroContentText {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero-title-fullstack {
+  position: relative;
+  top: 0;
+  left: -8.75rem;
+}
+
+@media (max-width: 768px) {
+  .hero-title-fullstack {
+    left: 0;
+  }
+}

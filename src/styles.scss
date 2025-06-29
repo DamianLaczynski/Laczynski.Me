@@ -22,8 +22,8 @@
   --large-desktop: 1920px;
   
   /* Glassmorphism effects */
-  --glass-blur: blur(2.5rem) saturate(180%); /* 40px to rem */
-  --glass-blur-light: blur(1.25rem) saturate(180%); /* 20px to rem */
+  --glass-blur: blur(2.5rem) saturate(100%); /* 40px to rem */
+  --glass-blur-light: blur(1.25rem) saturate(100%); /* 20px to rem */
   
   /* Shadows */
   --glass-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3), 
