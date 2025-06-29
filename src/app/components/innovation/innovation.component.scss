@@ -1,0 +1,19 @@
+/* Innovation Section - uses utility classes from global styles */
+
+.InnovationDescription {
+  max-width: 32rem;
+}
+
+@media (max-width: 1024px) {
+  .InnovationDescription {
+    max-width: 100%;
+  }
+}
+
+.PoweringInnovation {
+  // All SVG paths with primary orange fill
+  path {
+    fill: var(--primary-orange);
+    fill-opacity: 1;
+  }
+} 

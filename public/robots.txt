@@ -1,0 +1,38 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://laczynski.dev/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow common non-content paths (if any exist)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /api/
+
+# Allow all static assets
+Allow: /assets/
+Allow: /icons/
+Allow: *.css
+Allow: *.js
+Allow: *.png
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.gif
+Allow: *.svg
+Allow: *.ico
+Allow: *.woff
+Allow: *.woff2
+
+# Special bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: / 

@@ -1,0 +1,27 @@
+/* Experience Section - uses utility classes from global styles */
+
+.ExperienceCompany {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0 0 1rem 0;
+}
+
+.CompanyName {
+  font-size: clamp(1.2rem, 3vw, 1.73rem);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.CompanyDuration {
+  font-size: clamp(0.75rem, 2vw, 0.83rem);
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.ExperienceDescription {
+  line-height: 1.8;
+}
+
+ 

@@ -1,0 +1,76 @@
+/* Site container */
+.Site {
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto; /* Let content define the height */
+  gap: var(--section-spacing);
+  padding: var(--section-spacing) 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 1024px) {
+  .Site {
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .Site {
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+  }
+}
+
+/* Section layouts */
+.Site > * {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+@media (max-width: 768px) {
+  .Site > * {
+    padding: 0 1rem;
+  }
+}
+
+
+
+/* SVG and graphics */
+
+// Generic class for all orange SVG elements
+.svg-orange {
+  path, rect, circle, ellipse {
+    fill: var(--primary-orange) !important;
+    fill-opacity: 1;
+  }
+}
+
+// Generic class for white SVG elements
+.svg-white {
+  path, rect, circle, ellipse {
+    fill: var(--text-white) !important;
+    fill-opacity: 1;
+  }
+}
+
+
+
+/* Utility classes for responsive images and graphics */
+.responsive-svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}

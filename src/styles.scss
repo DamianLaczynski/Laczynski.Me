@@ -1,1 +1,738 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* CSS Variables */
+:root {
+  /* Colors */
+  --primary-orange: #FF5A1F;
+  --primary-purple: #7F7CAF;
+  --text-white: #FFFFFF;
+  --text-gray: #5A5A5A;
+  --bg-black: #000000;
+  
+  /* Responsive Variables */
+  --container-max-width: 1440px;
+  --container-padding: 2rem;
+  --section-spacing: 4rem;
+  --border-radius: 3.6875rem; /* 59px converted to rem */
+  
+  /* Breakpoints */
+  --mobile: 768px;
+  --tablet: 1024px;
+  --desktop: 1440px;
+  --large-desktop: 1920px;
+  
+  /* Glassmorphism effects */
+  --glass-blur: blur(2.5rem) saturate(100%); /* 40px to rem */
+  --glass-blur-light: blur(1.25rem) saturate(100%); /* 20px to rem */
+  
+  /* Shadows */
+  --glass-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3), 
+                  inset 0 0.0625rem 0 rgba(255, 255, 255, 0.1), 
+                  inset 0 -0.0625rem 0 rgba(0, 0, 0, 0.1);
+  --glass-shadow-alt: 0 0.5rem 2rem rgba(0, 0, 0, 0.3),
+                      inset 0 0.0625rem 0 rgba(255, 255, 255, 0.2), 
+                      inset 0 -0.0625rem 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; /* Base font size for rem calculations */
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-black);
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Container utility */
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Glassmorphism utility classes */
+.glass-effect {
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+  border: 0.125rem solid var(--primary-purple);
+}
+
+.glass-effect-orange {
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+  border: 0.125rem solid var(--primary-orange);
+}
+
+.glass-effect-light {
+  backdrop-filter: var(--glass-blur-light);
+  box-shadow: var(--glass-shadow-alt);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.1);
+}
+
+/* Typography */
+.heading-primary {
+  font-family: 'Bruno Ace', cursive;
+  font-weight: 400;
+  color: var(--primary-orange);
+  font-size: clamp(1.8rem, 5vw, 2.8rem); /* Added consistent size for section headings */
+  word-wrap: break-word;
+}
+
+.heading-secondary {
+  font-family: 'Bruno Ace', cursive;
+  font-weight: 400;
+  color: var(--text-white);
+  font-size: clamp(1.5rem, 4vw, 2.07rem); /* Responsive font size */
+  word-wrap: break-word;
+}
+
+.heading-large {
+  font-family: 'Bruno Ace', cursive;
+  font-weight: 400;
+  color: var(--text-white);
+  font-size: clamp(1.8rem, 5vw, 2.49rem);
+  word-wrap: break-word;
+}
+
+.heading-hero {
+  font-family: 'Bruno Ace', cursive;
+  font-weight: 400;
+  color: var(--primary-orange);
+  font-size: clamp(2rem, 6vw, 4rem); /* 48px-64px responsive */
+  word-wrap: break-word;
+}
+
+.text-body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: var(--text-white);
+  line-height: 1.6;
+}
+
+.text-span {
+  color: var(--text-white);
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.text-span-bold {
+  @extend .text-span;
+  font-weight: 700;
+}
+
+.text-span-orange {
+  @extend .text-span;
+  color: var(--primary-orange);
+}
+
+.text-contact {
+  font-family: 'Bruno Ace', cursive;
+  font-weight: 400;
+  color: var(--text-white);
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  word-wrap: break-word;
+}
+
+.text-footer {
+  font-family: 'Bruno Ace', cursive;
+  font-weight: 400;
+  color: var(--text-gray);
+  word-wrap: break-word;
+}
+
+.text-footer-large {
+  @extend .text-footer;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
+.text-footer-small {
+  @extend .text-footer;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+.text-button {
+  font-family: 'Bruno Ace', cursive;
+  font-weight: 400;
+  color: var(--text-white);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  word-wrap: break-word;
+}
+
+/* Background gradients */
+.bg-gradient-main {
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 25%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(255, 255, 255, 0.02) 75%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%),
+    radial-gradient(
+      ellipse 127.02% 151.92% at 15.32% 21.04%,
+      rgba(34, 56, 67, 0.3) 0%,
+      rgba(29.18, 71.02, 91.95, 0.08) 77%,
+      rgba(95.24, 124.1, 138.53, 0.02) 100%
+    );
+  background-blend-mode: normal, overlay, screen;
+}
+
+.bg-gradient-purple {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(127, 124, 175, 0.15) 25%,
+    rgba(34, 56, 67, 0.2) 50%,
+    rgba(29.18, 71.02, 91.95, 0.08) 75%,
+    rgba(95.24, 124.1, 138.53, 0.02) 100%
+  );
+  background-blend-mode: overlay, screen;
+}
+
+.bg-gradient-orange {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 90, 31, 0.18) 25%,
+    rgba(253.77, 108.18, 56.12, 0.08) 50%,
+    rgba(255, 90, 31, 0.12) 75%,
+    rgba(0, 0, 0, 0.02) 100%
+  );
+  background-blend-mode: overlay, screen;
+}
+
+.bg-gradient-hero {
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 25%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(255, 255, 255, 0.02) 75%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+      ellipse 127.02% 151.92% at 15.32% 21.04%,
+      rgba(255, 90, 31, 0.2) 0%,
+      rgba(253.77, 108.18, 56.12, 0.04) 77%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  background-blend-mode: overlay, screen;
+}
+
+/* Utility classes for responsive images and graphics */
+.responsive-svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* Common Layout Patterns */
+
+/* Two-column section layout used by most components */
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  border-radius: var(--border-radius);
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .section-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-grid {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+}
+
+/* Common background pattern for sections */
+.section-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  z-index: -1;
+}
+
+/* Common content layout pattern */
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 2;
+}
+
+/* Common graphics container pattern */
+.section-graphics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 20rem;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .section-graphics {
+    min-height: 15rem;
+  }
+}
+
+/* Common heading patterns */
+.section-heading {
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.section-subheading {
+  margin: 0 0 1rem 0;
+}
+
+/* Common text patterns */
+.section-text {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.section-text--max-width {
+  max-width: 30rem;
+}
+
+@media (max-width: 1024px) {
+  .section-text--max-width {
+    max-width: 100%;
+  }
+}
+
+/* Common button patterns */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: var(--border-radius);
+}
+
+.btn:hover {
+  transform: translateY(-0.125rem);
+}
+
+.btn__content {
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius);
+  backdrop-filter: var(--glass-blur-light);
+  border: 0.125rem solid;
+  transition: all 0.3s ease;
+}
+
+.btn--orange .btn__content {
+  background: var(--bg-gradient-orange);
+  border-color: var(--primary-orange);
+}
+
+.btn--orange:hover .btn__content {
+  box-shadow: 0 0.5rem 1.5rem rgba(255, 90, 31, 0.3);
+}
+
+.btn--purple .btn__content {
+  background: var(--bg-gradient-main);
+  border-color: var(--primary-purple);
+}
+
+.btn--purple:hover .btn__content {
+  box-shadow: 0 0.5rem 1.5rem rgba(127, 124, 175, 0.3);
+}
+
+.btn__text {
+  text-align: center;
+  margin: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .btn__content {
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .btn__text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Common graphic sizing patterns */
+.graphic--large {
+  width: 100%;
+  max-width: 25rem;
+  height: auto;
+}
+
+.graphic--xlarge {
+  width: 100%;
+  max-width: 30rem;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .graphic--large {
+    max-width: 18rem;
+  }
+  
+  .graphic--xlarge {
+    max-width: 20rem;
+  }
+}
+
+/* Consistent list styling across components */
+.custom-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.custom-list li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  color: var(--primary-orange);
+  font-size: 0.8rem;
+}
+
+/* Responsive adjustments for lists */
+@media (max-width: 768px) {
+  .custom-list li {
+    padding-left: 1.25rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .custom-list li::before {
+    font-size: 0.7rem;
+  }
+}
+
+/* ============================================================================ */
+/*                                 ANIMATIONS                                   */
+/* ============================================================================ */
+
+/* Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 1rem rgba(255, 90, 31, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 2rem rgba(255, 90, 31, 0.6);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-10deg) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
+
+/* Animation utility classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.8s ease-out forwards;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+.animate-slide-in-bottom {
+  animation: slideInFromBottom 1s ease-out forwards;
+}
+
+.animate-slide-in-top {
+  animation: slideInFromTop 1s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-rotate-in {
+  animation: rotateIn 0.8s ease-out forwards;
+}
+
+/* Staggered animation delays */
+.animate-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animate-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animate-delay-500 {
+  animation-delay: 0.5s;
+}
+
+.animate-delay-600 {
+  animation-delay: 0.6s;
+}
+
+.animate-delay-700 {
+  animation-delay: 0.7s;
+}
+
+.animate-delay-800 {
+  animation-delay: 0.8s;
+}
+
+/* Initial state for animated elements */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover animations */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 1.5rem rgba(255, 90, 31, 0.4);
+}
+
+/* Text animations */
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--text-white) 0%,
+    var(--primary-orange) 50%,
+    var(--text-white) 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    background-position: 200% 0;
+  }
+  50% {
+    background-position: -200% 0;
+  }
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -1,0 +1,178 @@
+/* Projects Container */
+.ProjectsContainer {
+  display: grid;
+  gap: var(--section-spacing);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .ProjectsContainer {
+    gap: 2rem;
+  }
+}
+
+/* Featured Projects Section */
+.FeaturedProjectsSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  border-radius: var(--border-radius);
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .FeaturedProjectsSection {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .FeaturedProjectsSection {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+}
+
+.FeaturedProjectsBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  z-index: -1;
+}
+
+.FeaturedProjectsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 2;
+}
+
+.FeaturedProjectsHeading {
+  margin: 0 0 0.5rem 0;
+}
+
+.FeaturedProjectTitle {
+  margin: 0 0 1rem 0;
+}
+
+.FeaturedProjectDescription {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.FeaturedProjectsGraphics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 15rem;
+  position: relative;
+}
+
+.FeaturedProjects {
+  width: 100%;
+  max-width: 25rem;
+  height: auto;
+  
+  path, rect, circle, ellipse {
+    fill: var(--primary-orange) !important;
+    fill-opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .FeaturedProjects {
+    max-width: 20rem;
+  }
+}
+
+/* Commercial Projects Section */
+.CommercialProjectsSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  border-radius: var(--border-radius);
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .CommercialProjectsSection {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .CommercialProjectsSection {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+}
+
+.CommercialProjectsBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  z-index: -1;
+}
+
+.CommercialProjectsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 2;
+}
+
+
+
+.CommercialProjectTitle {
+  margin: 0 0 1rem 0;
+}
+
+.CommercialProjectDetails {
+  margin: 0 0 1.5rem 0;
+  line-height: 1.6;
+}
+
+.CommercialProjectDescription {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.CommercialProjectsGraphics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 20rem;
+  position: relative;
+}
+
+.Magjob {
+  width: 100%;
+  max-width: 30rem;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .Magjob {
+    max-width: 20rem;
+  }
+}
+
+ 
