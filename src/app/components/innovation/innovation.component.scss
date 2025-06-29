@@ -1,0 +1,51 @@
+/* Innovation Section */
+.InnovationSection {
+  width: 1741px;
+  height: 640px;
+  left: -467px;
+  top: 2979px;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 59px;
+}
+
+.InnovationBackground {
+  width: 1741px;
+  height: 640px;
+  left: 1741px;
+  top: 640px;
+  position: absolute;
+  transform: rotate(180deg);
+  transform-origin: top left;
+  border-radius: 59px;
+}
+
+/* SVG and graphics */
+.PoweringInnovation {
+  left: 1230px;
+  top: 176px;
+  position: absolute;
+  
+  // All SVG paths with primary orange fill
+  path {
+    fill: var(--primary-orange);
+    fill-opacity: 1;
+  }
+}
+
+/* Innovation content */
+.InnovationHeading {
+  left: 694px;
+  top: 116px;
+  position: absolute;
+  font-size: 48px;
+}
+
+.InnovationDescription {
+  width: 501px;
+  left: 694px;
+  top: 256px;
+  position: absolute;
+  font-size: 16px;
+  line-height: 25.6px;
+} 

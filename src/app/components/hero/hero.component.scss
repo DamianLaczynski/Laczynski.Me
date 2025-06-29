@@ -1,0 +1,79 @@
+/* Hero Section */
+.HeroSection {
+  width: 1201px;
+  height: 722px;
+  left: 166px;
+  top: 156px;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 59px;
+}
+
+.HeroBackground {
+  width: 1201px;
+  height: 722px;
+  left: 1201px;
+  top: 722px;
+  position: absolute;
+  transform: rotate(180deg);
+  transform-origin: top left;
+  border-radius: 59px;
+}
+
+.HeroTitle {
+  left: 466px;
+  top: 73px;
+  position: absolute;
+  font-size: 64px;
+  color: var(--text-white);
+}
+
+.HeroName {
+  width: 505px;
+  height: 180px;
+  left: 601px;
+  top: 492px;
+  position: absolute;
+  text-align: right;
+  text-shadow: -4px 4px 16px rgba(0, 0, 0, 0.74);
+}
+
+.HeroDescription {
+  width: 491px;
+  left: 616px;
+  top: 247px;
+  position: absolute;
+}
+
+.FullstackDeveloper {
+  left: -18px;
+  top: 23px;
+  position: absolute;
+  
+  // White SVG elements
+  path {
+    fill: var(--text-white);
+    fill-opacity: 1;
+  }
+}
+
+/* Contact Button */
+.ContactButtonBackground {
+  width: 276px;
+  height: 54.99px;
+  left: 1111px;
+  top: 491.99px;
+  transform: rotate(180deg);
+  transform-origin: top left;
+  border-radius: 59px;
+  position: absolute;
+}
+
+.ContactButtonText {
+  width: 148px;
+  height: 17.09px;
+  left: 899px;
+  top: 455.58px;
+  position: absolute;
+  text-align: center;
+} 

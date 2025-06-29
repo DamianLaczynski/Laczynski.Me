@@ -1,0 +1,106 @@
+/* Featured Projects Section */
+.FeaturedProjectsSection {
+  width: 1741px;
+  height: 725px;
+  left: 166px;
+  top: 1167px;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 59px;
+}
+
+.FeaturedProjectsBackground {
+  width: 1741px;
+  height: 725px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  border-radius: 59px;
+}
+
+.FeaturedProjects {
+  left: 0px;
+  top: 217px;
+  position: absolute;
+  
+  path, rect, circle, ellipse {
+    fill: var(--primary-orange) !important;
+    fill-opacity: 1;
+  }
+}
+
+.FeaturedProjectTitle {
+  left: 596px;
+  top: 307px;
+  position: absolute;
+}
+
+.FeaturedProjectsHeading {
+  left: 596px;
+  top: 225px;
+  position: absolute;
+  font-size: 48px;
+}
+
+.FeaturedProjectDescription {
+  left: 596px;
+  top: 371px;
+  position: absolute;
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+/* Commercial Projects Section */
+.CommercialProjectsSection {
+  width: 1741px;
+  height: 870px;
+  left: -464px;
+  top: 1680px;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 59px;
+}
+
+.CommercialProjectsBackground {
+  width: 1741px;
+  height: 870px;
+  left: 1741px;
+  top: 870px;
+  position: absolute;
+  transform: rotate(180deg);
+  transform-origin: top left;
+  border-radius: 59px;
+}
+
+.Magjob {
+  left: 1192px;
+  top: 282px;
+  position: absolute;
+  width: 511px;
+  height: 474px;
+}
+
+.CommercialProjectDetails {
+  width: 486px;
+  left: 691px;
+  top: 346px;
+  position: absolute;
+}
+
+.CommercialProjectTitle {
+  left: 691px;
+  top: 282px;
+  position: absolute;
+}
+
+.CommercialProjectDescription {
+  left: 691px;
+  top: 613px;
+  position: absolute;
+}
+
+.CommercialProjectsHeading {
+  left: 691px;
+  top: 549px;
+  position: absolute;
+} 

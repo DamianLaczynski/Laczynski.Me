@@ -1,1 +1,311 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* CSS Variables */
+:root {
+  /* Colors */
+  --primary-orange: #FF5A1F;
+  --primary-purple: #7F7CAF;
+  --text-white: #FFFFFF;
+  --text-gray: #5A5A5A;
+  --bg-black: #000000;
+  
+  /* Glassmorphism effects */
+  --glass-blur: blur(40px) saturate(180%);
+  --glass-blur-light: blur(20px) saturate(180%);
+  
+  /* Shadows */
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 
+                  inset 0 1px 0 rgba(255, 255, 255, 0.1), 
+                  inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  --glass-shadow-alt: 0 8px 32px rgba(0, 0, 0, 0.3),
+                      inset 0 1px 0 rgba(255, 255, 255, 0.2), 
+                      inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Base styles */
+body {
+  background: var(--bg-black);
+  margin: 0;
+  padding: 0;
+}
+
+/* Glassmorphism utility classes */
+.glass-effect {
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+  border: 2px solid var(--primary-purple);
+}
+
+.glass-effect-orange {
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+  border: 2px solid var(--primary-orange);
+}
+
+.glass-effect-light {
+  backdrop-filter: var(--glass-blur-light);
+  box-shadow: var(--glass-shadow-alt);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Typography */
+.heading-primary {
+  font-family: 'Bruno Ace', cursive;
+  font-weight: 400;
+  color: var(--primary-orange);
+}
+
+.heading-secondary {
+  font-family: 'Bruno Ace', cursive;
+  font-weight: 400;
+  color: var(--text-white);
+  font-size: 33.18px;
+  word-wrap: break-word;
+}
+
+.heading-large {
+  font-family: 'Bruno Ace', cursive;
+  font-weight: 400;
+  color: var(--text-white);
+  font-size: 39.81px;
+  word-wrap: break-word;
+}
+
+.heading-hero {
+  font-family: 'Bruno Ace', cursive;
+  font-weight: 400;
+  color: var(--primary-orange);
+  font-size: 48px;
+  word-wrap: break-word;
+}
+
+.text-body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: var(--text-white);
+  line-height: 1.6;
+}
+
+.text-span {
+  color: var(--text-white);
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 25.6px;
+  word-wrap: break-word;
+}
+
+.text-span-bold {
+  @extend .text-span;
+  font-weight: 700;
+}
+
+.text-span-orange {
+  @extend .text-span;
+  color: var(--primary-orange);
+}
+
+.text-contact {
+  font-family: 'Bruno Ace', cursive;
+  font-weight: 400;
+  color: var(--text-white);
+  font-size: 16px;
+  word-wrap: break-word;
+}
+
+.text-footer {
+  font-family: 'Bruno Ace', cursive;
+  font-weight: 400;
+  color: var(--text-gray);
+  word-wrap: break-word;
+}
+
+.text-footer-large {
+  @extend .text-footer;
+  font-size: 24px;
+}
+
+.text-footer-small {
+  @extend .text-footer;
+  font-size: 19.2px;
+}
+
+.text-button {
+  font-family: 'Bruno Ace', cursive;
+  font-weight: 400;
+  color: var(--text-white);
+  font-size: 19.2px;
+  word-wrap: break-word;
+}
+
+/* Background gradients */
+.bg-gradient-main {
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 25%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(255, 255, 255, 0.02) 75%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%),
+    radial-gradient(
+      ellipse 127.02% 151.92% at 15.32% 21.04%,
+      rgba(34, 56, 67, 0.3) 0%,
+      rgba(29.18, 71.02, 91.95, 0.08) 77%,
+      rgba(95.24, 124.1, 138.53, 0.02) 100%
+    );
+  background-blend-mode: normal, overlay, screen;
+}
+
+.bg-gradient-purple {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(127, 124, 175, 0.15) 25%,
+    rgba(34, 56, 67, 0.2) 50%,
+    rgba(29.18, 71.02, 91.95, 0.08) 75%,
+    rgba(95.24, 124.1, 138.53, 0.02) 100%
+  );
+  background-blend-mode: overlay, screen;
+}
+
+.bg-gradient-orange {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 90, 31, 0.18) 25%,
+    rgba(253.77, 108.18, 56.12, 0.08) 50%,
+    rgba(255, 90, 31, 0.12) 75%,
+    rgba(0, 0, 0, 0.02) 100%
+  );
+  background-blend-mode: overlay, screen;
+}
+
+.bg-gradient-hero {
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 25%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(255, 255, 255, 0.02) 75%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+      ellipse 127.02% 151.92% at 15.32% 21.04%,
+      rgba(255, 90, 31, 0.2) 0%,
+      rgba(253.77, 108.18, 56.12, 0.04) 77%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  background-blend-mode: overlay, screen;
+}
+
+.bg-gradient-experience {
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 25%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(255, 255, 255, 0.02) 75%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+      ellipse 127.02% 151.92% at 15.32% 21.04%,
+      rgba(34, 56, 67, 0.2) 0%,
+      rgba(29.18, 71.02, 91.95, 0.04) 77%,
+      rgba(95.24, 124.1, 138.53, 0) 100%
+    );
+  background-blend-mode: overlay, screen;
+}
+
+.bg-button {
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 25%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(255, 255, 255, 0.02) 75%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+      ellipse 127.02% 151.92% at 15.32% 21.04%,
+      rgba(34, 56, 67, 0.2) 0%,
+      rgba(29.18, 71.02, 91.95, 0.04) 77%,
+      rgba(95.24, 124.1, 138.53, 0) 100%
+    );
+  background-blend-mode: overlay, screen;
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+  border: 2px rgba(255, 90, 31, 0.8) solid;
+  border-radius: 59px;
+}
+
+/* Layout utilities */
+.section-container {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 59px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-column-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.flex-row-center {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+}
+
+.flex-row-details {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+/* Positioning helpers */
+.position-absolute {
+  position: absolute;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Common element dimensions */
+.contact-icon {
+  width: 52px;
+  height: 52px;
+}
+
+.contact-icon-email {
+  width: 52px;
+  height: 41px;
+}
+
+.contact-icon-github {
+  width: 52px;
+  height: 49px;
+}

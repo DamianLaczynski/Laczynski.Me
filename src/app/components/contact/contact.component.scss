@@ -1,0 +1,79 @@
+/* Contact Section */
+.ContactSection {
+  width: 1201px;
+  height: 447px;
+  left: 166px;
+  top: 3673px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.ContactBackground {
+  width: 1201px;
+  height: 447px;
+  left: 1201px;
+  top: 447px;
+  position: absolute;
+  transform: rotate(180deg);
+  transform-origin: top left;
+  border-radius: 59px;
+}
+
+.CallToAction {
+  width: 480px;
+  height: 302px;
+  left: 103px;
+  top: 73px;
+  position: absolute;
+}
+
+.CallToActionHeading {
+  width: 436px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+}
+
+.CallToActionText {
+  width: 480px;
+  left: 0px;
+  top: 120px;
+  position: absolute;
+}
+
+.ContactDetails {
+  left: 641px;
+  top: 42px;
+  position: absolute;
+}
+
+.EmailInfo,
+.GithubInfo,
+.LinkedinInfo {
+  width: 455px; 
+}
+
+.LinkedinInfo {
+  padding-right: 24px;
+}
+
+.EmailAddress,
+.GithubLink,
+.LinkedinLink {
+  // Contact link styling handled by utility classes
+}
+
+.Email {
+  width: 52px;
+  height: 41px;
+}
+
+.GithubSmall {  
+  width: 52px;
+  height: 49px;
+}
+
+.Linkendin {
+  width: 52px;
+  height: 52px;
+} 

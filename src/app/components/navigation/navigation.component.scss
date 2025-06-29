@@ -1,0 +1,22 @@
+/* Navigation */
+.Navigation {
+  width: 864px;
+  padding-left: 64px;
+  padding-right: 64px;
+  left: 503px;
+  top: 59px;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  display: inline-flex;
+}
+
+.ExperienceLink,
+.ProjectsLink,
+.MeLink,
+.ContactLink {
+  text-align: center;
+  font-size: 23.04px;
+  text-shadow: -4px 4px 16px rgba(255, 255, 255, 0.2);
+  color: var(--text-white);
+} 
