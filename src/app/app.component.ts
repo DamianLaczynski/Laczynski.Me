@@ -8,6 +8,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GitHubProjectsComponent } from './components/github-projects/github-projects.component';
+import { AnalyticsService } from './shared/analytics.service';
 
 @Component({
   selector: 'app-root',
@@ -29,7 +30,12 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   title = 'Laczynski.Me';
   private intersectionObserver?: IntersectionObserver;
 
+  constructor(private analytics: AnalyticsService) {}
+
   ngOnInit() {
+    // Track initial page load
+    this.analytics.trackPage('Portfolio - Damian Łaczyński', '/');
+
     // Initialize scroll animations after view is loaded
   }
 
