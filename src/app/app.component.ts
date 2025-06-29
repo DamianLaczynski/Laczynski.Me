@@ -1,5 +1,4 @@
 import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { InnovationComponent } from './components/innovation/innovation.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { HeroComponent } from './components/hero/hero.component';
@@ -13,7 +12,6 @@ import { GitHubProjectsComponent } from './components/github-projects/github-pro
 @Component({
   selector: 'app-root',
   imports: [
-    RouterOutlet,
     InnovationComponent,
     ExperienceComponent,
     HeroComponent,
