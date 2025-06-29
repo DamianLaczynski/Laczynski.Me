@@ -1,54 +1,115 @@
 /* Hero Section */
 .HeroSection {
-  width: 1201px;
-  height: 722px;
-  left: 166px;
-  top: 156px;
-  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 50vh;
+  border-radius: var(--border-radius);
+  padding: 3rem;
+  gap: 2rem;
+  position: relative;
   overflow: hidden;
-  border-radius: 59px;
+}
+
+@media (max-width: 1024px) {
+  .HeroSection {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .HeroSection {
+    padding: 1.5rem;
+    gap: 1.5rem;
+    min-height: 60vh;
+  }
 }
 
 .HeroBackground {
-  width: 1201px;
-  height: 722px;
-  left: 1201px;
-  top: 722px;
   position: absolute;
-  transform: rotate(180deg);
-  transform-origin: top left;
-  border-radius: 59px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  z-index: -1;
+}
+
+/* Hero Content */
+.HeroContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 2;
 }
 
 .HeroTitle {
-  left: 466px;
-  top: 73px;
-  position: absolute;
-  font-size: 64px;
+  font-size: clamp(2.5rem, 6vw, 4rem);
   color: var(--text-white);
+  margin: 0;
+  line-height: 1.2;
 }
 
 .HeroName {
-  width: 505px;
-  height: 180px;
-  left: 601px;
-  top: 492px;
-  position: absolute;
-  text-align: right;
-  text-shadow: -4px 4px 16px rgba(0, 0, 0, 0.74);
+  text-align: left;
+  text-shadow: -0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.74);
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .HeroName {
+    text-align: center;
+  }
 }
 
 .HeroDescription {
-  width: 491px;
-  left: 616px;
-  top: 247px;
-  position: absolute;
+  max-width: 30rem;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .HeroDescription {
+    max-width: 100%;
+  }
+}
+
+/* Hero Graphics */
+.HeroGraphics {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 20rem;
+}
+
+.HeroImage {
+  width: 100%;
+  max-width: 35rem;
+  height: auto;
+  border-radius: var(--border-radius);
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .HeroImage {
+    max-width: 25rem;
+  }
 }
 
 .FullstackDeveloper {
-  left: -18px;
-  top: 23px;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 30rem;
+  height: auto;
+  z-index: 2;
   
   // White SVG elements
   path {
@@ -57,23 +118,14 @@
   }
 }
 
-/* Contact Button */
-.ContactButtonBackground {
-  width: 276px;
-  height: 54.99px;
-  left: 1111px;
-  top: 491.99px;
-  transform: rotate(180deg);
-  transform-origin: top left;
-  border-radius: 59px;
-  position: absolute;
+@media (max-width: 768px) {
+  .FullstackDeveloper {
+    width: 80%;
+    max-width: 20rem;
+  }
 }
 
-.ContactButtonText {
-  width: 148px;
-  height: 17.09px;
-  left: 899px;
-  top: 455.58px;
-  position: absolute;
-  text-align: center;
+/* Contact Button */
+.ContactButton {
+  margin-top: 1rem;
 } 

@@ -1,79 +1,53 @@
-/* Contact Section */
-.ContactSection {
-  width: 1201px;
-  height: 447px;
-  left: 166px;
-  top: 3673px;
-  position: absolute;
-  overflow: hidden;
+/* Contact Section - uses utility classes from global styles */
+
+.ContactInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
 }
 
-.ContactBackground {
-  width: 1201px;
-  height: 447px;
-  left: 1201px;
-  top: 447px;
-  position: absolute;
-  transform: rotate(180deg);
-  transform-origin: top left;
-  border-radius: 59px;
+.ContactInfo:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
 }
 
-.CallToAction {
-  width: 480px;
-  height: 302px;
-  left: 103px;
-  top: 73px;
-  position: absolute;
+.ContactIcon {
+  width: 3.25rem;
+  height: 3.25rem;
+  flex-shrink: 0;
 }
 
-.CallToActionHeading {
-  width: 436px;
-  left: 0px;
-  top: 0px;
-  position: absolute;
+.ContactLink {
+  color: var(--text-white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.CallToActionText {
-  width: 480px;
-  left: 0px;
-  top: 120px;
-  position: absolute;
+.ContactLink:hover {
+  color: var(--primary-orange);
 }
 
-.ContactDetails {
-  left: 641px;
-  top: 42px;
-  position: absolute;
+@media (max-width: 768px) {
+  .ContactInfo {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+  
+  .ContactIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .ContactLink {
+    font-size: 0.9rem;
+  }
 }
 
-.EmailInfo,
-.GithubInfo,
-.LinkedinInfo {
-  width: 455px; 
-}
-
-.LinkedinInfo {
-  padding-right: 24px;
-}
-
-.EmailAddress,
-.GithubLink,
-.LinkedinLink {
-  // Contact link styling handled by utility classes
-}
-
-.Email {
-  width: 52px;
-  height: 41px;
-}
-
-.GithubSmall {  
-  width: 52px;
-  height: 49px;
-}
-
-.Linkendin {
-  width: 52px;
-  height: 52px;
-} 
+ 

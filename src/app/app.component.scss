@@ -1,131 +1,42 @@
 /* Site container */
 .Site {
-  width: 1440px;
-  height: 4189px;
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto; /* Let content define the height */
+  gap: var(--section-spacing);
+  padding: var(--section-spacing) 0;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
+/* Responsive layout adjustments */
+@media (max-width: 1024px) {
+  .Site {
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+}
 
-
-/* Contact Buttons (GitHub button only) */
-.GithubButtonBackground {
-  transform: rotate(180deg);
-  transform-origin: top left;
-  border-radius: 59px;
-  position: absolute;
+@media (max-width: 768px) {
+  .Site {
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+  }
 }
 
 /* Section layouts */
-
-/* Additional Section */
-.AdditionalSection {
-  width: 1741px;
-  height: 870px;
-  left: 2115px;
-  top: 3510px;
-  position: absolute;
-  overflow: hidden;
-  border-radius: 59px;
+.Site > * {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
 }
 
-.AdditionalSectionBackground {
-  width: 1741px;
-  height: 870px;
-  left: 0px;
-  top: 0px;
-  position: absolute;
-  border-radius: 59px;
-}
-
-
-
-/* Hero Image */
-.HeroImage {
-  width: 1741px;
-  height: 1046px;
-  left: 503px;
-  top: -358px;
-  position: absolute;
-  border-radius: 59px;
-}
-
-
-
-/* Projects Section */
-.ProjectsSection {
-  width: 1201px;
-  height: 591px;
-  left: 166px;
-  top: 2468px;
-  position: absolute;
-  overflow: hidden;
-}
-
-.ProjectsBackground {
-  width: 1201px;
-  height: 591px;
-  left: 1201px;
-  top: 591px;
-  position: absolute;
-  transform: rotate(180deg);
-  transform-origin: top left;
-  border-radius: 59px;
-}
-
-.Icons8Github1 {
-  width: 525px;
-  height: 525px;
-  left: 626px;
-  top: 33px;
-  position: absolute;
-  overflow: hidden;
-}
-
-.GithubMarkWhite1 {
-  width: 426.56px;
-  height: 418.03px;
-  left: 50px;
-  top: 54px;
-  position: absolute;
-}
-
-.Github {
-  left: 0px;
-  top: -0.01px;
-  position: absolute;
-  width: 425px;
-  height: 420px;
-}
-
-.ProjectsHeading {
-  width: 525px;
-  height: 58px;
-  left: 101px;
-  top: 147px;
-  position: absolute;
-}
-
-.ProjectsDescription {
-  width: 468.86px;
-  left: 101px;
-  top: 245px;
-  position: absolute;
-}
-
-.GithubButtonBackground {
-  width: 468.86px;
-  height: 54.99px;
-  left: 569.86px;
-  top: 443.98px;
-}
-
-.GithubButtonText {
-  width: 273.42px;
-  left: 198.72px;
-  top: 404px;
-  position: absolute;
-  text-align: center;
+@media (max-width: 768px) {
+  .Site > * {
+    padding: 0 1rem;
+  }
 }
 
 
@@ -148,14 +59,18 @@
   }
 }
 
-// Specific SVG element classes
-.CommercialProjectIcon,
-.Ellipse4,
-.Ellipse5 {
-  position: absolute;
-  
-  path, rect, circle, ellipse {
-    fill: var(--primary-orange) !important;
-    fill-opacity: 1;
-  }
+
+
+/* Utility classes for responsive images and graphics */
+.responsive-svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
 }

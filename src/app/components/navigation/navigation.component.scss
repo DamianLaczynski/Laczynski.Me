@@ -1,22 +1,71 @@
 /* Navigation */
 .Navigation {
-  width: 864px;
-  padding-left: 64px;
-  padding-right: 64px;
-  left: 503px;
-  top: 59px;
-  position: absolute;
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  display: inline-flex;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 2rem;
+  max-width: 54rem;
+  width: calc(100% - 2rem);
 }
 
-.ExperienceLink,
-.ProjectsLink,
-.MeLink,
-.ContactLink {
+@media (max-width: 1024px) {
+  .Navigation {
+    padding: 0.75rem 1.5rem;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .Navigation {
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+    max-width: calc(100% - 2rem);
+  }
+}
+
+.NavLink {
   text-align: center;
-  font-size: 23.04px;
-  text-shadow: -4px 4px 16px rgba(255, 255, 255, 0.2);
   color: var(--text-white);
-} 
+  text-decoration: none;
+  font-size: clamp(0.9rem, 2.5vw, 1.44rem);
+  text-shadow: -0.25rem 0.25rem 1rem rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.NavLink:hover {
+  color: var(--primary-orange);
+  background: rgba(255, 90, 31, 0.1);
+  transform: translateY(-2px);
+}
+
+.NavLink.active {
+  color: var(--primary-orange);
+  background: rgba(255, 90, 31, 0.15);
+}
+
+@media (max-width: 768px) {
+  .NavLink {
+    padding: 0.25rem 0.5rem;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+  }
+}
+
+/* Smooth scroll behavior for navigation links */
+html {
+  scroll-behavior: smooth;
+}
+
+ 

@@ -1,118 +1,64 @@
-<div
-  data-layer="Contact section"
-  class="ContactSection"
-  style="
-    width: 1201px;
-    height: 447px;
-    left: 166px;
-    top: 3673px;
-    position: absolute;
-    overflow: hidden;
-  "
->
-  <div
-    data-layer="Contact background"
-    class="ContactBackground"
-    style="
-      width: 1201px;
-      height: 447px;
-      left: 1201px;
-      top: 447px;
-      position: absolute;
-      transform: rotate(180deg);
-      transform-origin: top left;
-      background: linear-gradient(
-          135deg,
-          rgba(255, 255, 255, 0.1) 0%,
-          rgba(255, 255, 255, 0.05) 25%,
-          rgba(0, 0, 0, 0.1) 50%,
-          rgba(255, 255, 255, 0.02) 75%,
-          rgba(0, 0, 0, 0.15) 100%
-        ),
-        radial-gradient(
-          ellipse 127.02% 151.92% at 15.32% 21.04%,
-          rgba(34, 56, 67, 0.2) 0%,
-          rgba(29.18, 71.02, 91.95, 0.04) 77%,
-          rgba(95.24, 124.1, 138.53, 0) 100%
-        );
-      background-blend-mode: overlay, screen;
-      border-radius: 59px;
-      border: 2px rgba(127, 124, 175, 0.8) solid;
-      backdrop-filter: blur(40px) saturate(180%);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-    "
-  ></div>
-  <div
-    data-layer="Call to action"
-    class="CallToAction"
-    style="
-      width: 480px;
-      height: 302px;
-      left: 103px;
-      top: 73px;
-      position: absolute;
-    "
-  >
-    <div
-      data-layer="Call to action heading"
-      class="CallToActionHeading heading-large flex-column-end"
-    >
-      Let's Build Something Great
-    </div>
-    <div
-      data-layer="Call to action text"
-      class="CallToActionText text-span flex-column-end"
-    >
-      Ready to collaborate on your next project?<br /><br />I'm always excited
-      to discuss new opportunities and challenging projects.<br />Whether you
-      need a dedicated team member or expertise in modern web development,<br />let's
-      connect!
-    </div>
+<section id="contact" class="section-grid">
+  <div class="section-background bg-gradient-main glass-effect"></div>
+
+  <div class="section-content">
+    <h2 class="section-heading heading-large">Let's Build Something Great</h2>
+
+    <p class="section-text text-span">
+      Ready to collaborate on your next project? I'm always excited to discuss
+      new opportunities and challenging projects. Whether you need a dedicated
+      team member or expertise in modern web development, let's connect!
+    </p>
   </div>
-  <div data-layer="Contact details" class="ContactDetails flex-row-details">
-    <div data-layer="Email info" class="EmailInfo flex-row-center">
+
+  <div class="section-content">
+    <div class="ContactInfo">
       <img
-        data-layer="email"
-        class="Email contact-icon-email"
+        class="ContactIcon"
         src="/icons/email.svg"
-        alt="Email"
+        alt="Email Icon"
+        loading="lazy"
       />
-      <div
-        data-layer="Email address"
-        class="EmailAddress text-contact flex-column-end"
+      <a
+        href="mailto:damianlaczynski@gmail.com"
+        class="ContactLink text-contact"
       >
         damianlaczynski&#64;gmail.com
-      </div>
+      </a>
     </div>
-    <div data-layer="GitHub info" class="GithubInfo flex-row-center">
+
+    <div class="ContactInfo">
       <img
-        data-layer="github-small"
-        class="GithubSmall contact-icon-github"
+        class="ContactIcon"
         src="/icons/github-contact.svg"
-        alt="GitHub"
+        alt="GitHub Icon"
+        loading="lazy"
       />
-      <div
-        data-layer="GitHub link"
-        class="GithubLink text-contact flex-column-end"
+      <a
+        href="https://github.com/DamianLaczynski"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ContactLink text-contact"
       >
         github.com/DamianLaczynski
-      </div>
+      </a>
     </div>
-    <div data-layer="LinkedIn info" class="LinkedinInfo flex-row-center">
+
+    <div class="ContactInfo">
       <img
-        data-layer="linkendin"
-        class="Linkendin contact-icon"
+        class="ContactIcon"
         src="/icons/linkedin-contact.svg"
-        alt="LinkedIn"
+        alt="LinkedIn Icon"
+        loading="lazy"
       />
-      <div
-        data-layer="LinkedIn link"
-        class="LinkedinLink text-contact flex-column-end"
+      <a
+        href="https://linkedin.com/in/damianlaczynski"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ContactLink text-contact"
       >
         linkedin.com/in/damianlaczynski
-      </div>
+      </a>
     </div>
   </div>
-</div>
+</section>

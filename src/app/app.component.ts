@@ -8,6 +8,7 @@ import { SocialLinksComponent } from './components/social-links/social-links.com
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { GitHubProjectsComponent } from './components/github-projects/github-projects.component';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ProjectsComponent,
     ContactComponent,
     FooterComponent,
+    GitHubProjectsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

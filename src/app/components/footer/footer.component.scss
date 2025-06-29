@@ -1,7 +1,25 @@
 /* Footer */
+.FooterSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-top: var(--section-spacing);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .FooterText {
-  left: 434px;
-  top: 4143px;
-  position: absolute;
-  text-align: right;
+  text-align: center;
+  margin: 0;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .FooterSection {
+    padding: 1.5rem 1rem;
+  }
+  
+  .FooterText {
+    font-size: 0.9rem;
+  }
 } 

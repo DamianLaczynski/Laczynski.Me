@@ -9,43 +9,81 @@
   --text-gray: #5A5A5A;
   --bg-black: #000000;
   
+  /* Responsive Variables */
+  --container-max-width: 1440px;
+  --container-padding: 2rem;
+  --section-spacing: 4rem;
+  --border-radius: 3.6875rem; /* 59px converted to rem */
+  
+  /* Breakpoints */
+  --mobile: 768px;
+  --tablet: 1024px;
+  --desktop: 1440px;
+  --large-desktop: 1920px;
+  
   /* Glassmorphism effects */
-  --glass-blur: blur(40px) saturate(180%);
-  --glass-blur-light: blur(20px) saturate(180%);
+  --glass-blur: blur(2.5rem) saturate(180%); /* 40px to rem */
+  --glass-blur-light: blur(1.25rem) saturate(180%); /* 20px to rem */
   
   /* Shadows */
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 
-                  inset 0 1px 0 rgba(255, 255, 255, 0.1), 
-                  inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-  --glass-shadow-alt: 0 8px 32px rgba(0, 0, 0, 0.3),
-                      inset 0 1px 0 rgba(255, 255, 255, 0.2), 
-                      inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  --glass-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3), 
+                  inset 0 0.0625rem 0 rgba(255, 255, 255, 0.1), 
+                  inset 0 -0.0625rem 0 rgba(0, 0, 0, 0.1);
+  --glass-shadow-alt: 0 0.5rem 2rem rgba(0, 0, 0, 0.3),
+                      inset 0 0.0625rem 0 rgba(255, 255, 255, 0.2), 
+                      inset 0 -0.0625rem 0 rgba(0, 0, 0, 0.1);
 }
 
 /* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; /* Base font size for rem calculations */
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--bg-black);
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Container utility */
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
 }
 
 /* Glassmorphism utility classes */
 .glass-effect {
   backdrop-filter: var(--glass-blur);
   box-shadow: var(--glass-shadow);
-  border: 2px solid var(--primary-purple);
+  border: 0.125rem solid var(--primary-purple);
 }
 
 .glass-effect-orange {
   backdrop-filter: var(--glass-blur);
   box-shadow: var(--glass-shadow);
-  border: 2px solid var(--primary-orange);
+  border: 0.125rem solid var(--primary-orange);
 }
 
 .glass-effect-light {
   backdrop-filter: var(--glass-blur-light);
   box-shadow: var(--glass-shadow-alt);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.1);
 }
 
 /* Typography */
@@ -53,13 +91,15 @@ body {
   font-family: 'Bruno Ace', cursive;
   font-weight: 400;
   color: var(--primary-orange);
+  font-size: clamp(1.8rem, 5vw, 2.8rem); /* Added consistent size for section headings */
+  word-wrap: break-word;
 }
 
 .heading-secondary {
   font-family: 'Bruno Ace', cursive;
   font-weight: 400;
   color: var(--text-white);
-  font-size: 33.18px;
+  font-size: clamp(1.5rem, 4vw, 2.07rem); /* Responsive font size */
   word-wrap: break-word;
 }
 
@@ -67,7 +107,7 @@ body {
   font-family: 'Bruno Ace', cursive;
   font-weight: 400;
   color: var(--text-white);
-  font-size: 39.81px;
+  font-size: clamp(1.8rem, 5vw, 2.49rem);
   word-wrap: break-word;
 }
 
@@ -75,7 +115,7 @@ body {
   font-family: 'Bruno Ace', cursive;
   font-weight: 400;
   color: var(--primary-orange);
-  font-size: 48px;
+  font-size: clamp(2rem, 6vw, 4rem); /* 48px-64px responsive */
   word-wrap: break-word;
 }
 
@@ -88,10 +128,10 @@ body {
 
 .text-span {
   color: var(--text-white);
-  font-size: 16px;
+  font-size: clamp(0.875rem, 2vw, 1rem);
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  line-height: 25.6px;
+  line-height: 1.6;
   word-wrap: break-word;
 }
 
@@ -109,7 +149,7 @@ body {
   font-family: 'Bruno Ace', cursive;
   font-weight: 400;
   color: var(--text-white);
-  font-size: 16px;
+  font-size: clamp(0.875rem, 2vw, 1rem);
   word-wrap: break-word;
 }
 
@@ -122,19 +162,19 @@ body {
 
 .text-footer-large {
   @extend .text-footer;
-  font-size: 24px;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
 }
 
 .text-footer-small {
   @extend .text-footer;
-  font-size: 19.2px;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
 }
 
 .text-button {
   font-family: 'Bruno Ace', cursive;
   font-weight: 400;
   color: var(--text-white);
-  font-size: 19.2px;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   word-wrap: break-word;
 }
 
@@ -200,112 +240,219 @@ body {
   background-blend-mode: overlay, screen;
 }
 
-.bg-gradient-experience {
-  background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.1) 0%,
-      rgba(255, 255, 255, 0.05) 25%,
-      rgba(0, 0, 0, 0.1) 50%,
-      rgba(255, 255, 255, 0.02) 75%,
-      rgba(0, 0, 0, 0.15) 100%
-    ),
-    radial-gradient(
-      ellipse 127.02% 151.92% at 15.32% 21.04%,
-      rgba(34, 56, 67, 0.2) 0%,
-      rgba(29.18, 71.02, 91.95, 0.04) 77%,
-      rgba(95.24, 124.1, 138.53, 0) 100%
-    );
-  background-blend-mode: overlay, screen;
+/* Utility classes for responsive images and graphics */
+.responsive-svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
-.bg-button {
-  background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.1) 0%,
-      rgba(255, 255, 255, 0.05) 25%,
-      rgba(0, 0, 0, 0.1) 50%,
-      rgba(255, 255, 255, 0.02) 75%,
-      rgba(0, 0, 0, 0.15) 100%
-    ),
-    radial-gradient(
-      ellipse 127.02% 151.92% at 15.32% 21.04%,
-      rgba(34, 56, 67, 0.2) 0%,
-      rgba(29.18, 71.02, 91.95, 0.04) 77%,
-      rgba(95.24, 124.1, 138.53, 0) 100%
-    );
-  background-blend-mode: overlay, screen;
-  backdrop-filter: var(--glass-blur);
-  box-shadow: var(--glass-shadow);
-  border: 2px rgba(255, 90, 31, 0.8) solid;
-  border-radius: 59px;
+.responsive-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
 }
 
-/* Layout utilities */
-.section-container {
-  position: absolute;
-  overflow: hidden;
-  border-radius: 59px;
-}
+/* Common Layout Patterns */
 
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-column-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.flex-column-end {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.flex-row-center {
-  display: inline-flex;
-  justify-content: flex-start;
+/* Two-column section layout used by most components */
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
   align-items: center;
-  gap: 24px;
+  border-radius: var(--border-radius);
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
 }
 
-.flex-row-details {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 16px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+@media (max-width: 1024px) {
+  .section-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
 }
 
-/* Positioning helpers */
-.position-absolute {
+@media (max-width: 768px) {
+  .section-grid {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+}
+
+/* Common background pattern for sections */
+.section-background {
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  z-index: -1;
 }
 
-.text-center {
+/* Common content layout pattern */
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 2;
+}
+
+/* Common graphics container pattern */
+.section-graphics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 20rem;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .section-graphics {
+    min-height: 15rem;
+  }
+}
+
+/* Common heading patterns */
+.section-heading {
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.section-subheading {
+  margin: 0 0 1rem 0;
+}
+
+/* Common text patterns */
+.section-text {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.section-text--max-width {
+  max-width: 30rem;
+}
+
+@media (max-width: 1024px) {
+  .section-text--max-width {
+    max-width: 100%;
+  }
+}
+
+/* Common button patterns */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: var(--border-radius);
+}
+
+.btn:hover {
+  transform: translateY(-0.125rem);
+}
+
+.btn__content {
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius);
+  backdrop-filter: var(--glass-blur-light);
+  border: 0.125rem solid;
+  transition: all 0.3s ease;
+}
+
+.btn--orange .btn__content {
+  background: var(--bg-gradient-orange);
+  border-color: var(--primary-orange);
+}
+
+.btn--orange:hover .btn__content {
+  box-shadow: 0 0.5rem 1.5rem rgba(255, 90, 31, 0.3);
+}
+
+.btn--purple .btn__content {
+  background: var(--bg-gradient-main);
+  border-color: var(--primary-purple);
+}
+
+.btn--purple:hover .btn__content {
+  box-shadow: 0 0.5rem 1.5rem rgba(127, 124, 175, 0.3);
+}
+
+.btn__text {
   text-align: center;
+  margin: 0;
+  white-space: nowrap;
 }
 
-.text-right {
-  text-align: right;
+@media (max-width: 768px) {
+  .btn__content {
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .btn__text {
+    font-size: 0.9rem;
+  }
 }
 
-/* Common element dimensions */
-.contact-icon {
-  width: 52px;
-  height: 52px;
+/* Common graphic sizing patterns */
+.graphic--large {
+  width: 100%;
+  max-width: 25rem;
+  height: auto;
 }
 
-.contact-icon-email {
-  width: 52px;
-  height: 41px;
+.graphic--xlarge {
+  width: 100%;
+  max-width: 30rem;
+  height: auto;
 }
 
-.contact-icon-github {
-  width: 52px;
-  height: 49px;
+@media (max-width: 768px) {
+  .graphic--large {
+    max-width: 18rem;
+  }
+  
+  .graphic--xlarge {
+    max-width: 20rem;
+  }
+}
+
+/* Consistent list styling across components */
+.custom-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.custom-list li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  color: var(--primary-orange);
+  font-size: 0.8rem;
+}
+
+/* Responsive adjustments for lists */
+@media (max-width: 768px) {
+  .custom-list li {
+    padding-left: 1.25rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .custom-list li::before {
+    font-size: 0.7rem;
+  }
 }
