@@ -41,7 +41,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./dist/laczynski.me"
+          path: "./dist/laczynski.me/browser"
 
   deploy:
     environment:
