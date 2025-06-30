@@ -34,7 +34,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngOnInit() {
     // Track initial page load
-    this.analytics.trackPage('Portfolio - Damian Łaczyński', '/');
+    this.analytics.trackPage('Portfolio - Damian Łączyński', '/');
 
     // Initialize scroll animations after view is loaded
   }

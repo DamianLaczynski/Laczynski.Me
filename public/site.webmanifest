@@ -1,7 +1,7 @@
 {
-  "name": "Damian Łaczyński - Fullstack Developer Portfolio",
-  "short_name": "Łaczyński Portfolio",
-  "description": "Professional portfolio of Damian Łaczyński, experienced Fullstack Developer specializing in .NET and Angular",
+  "name": "Damian Łączyński - Fullstack Developer Portfolio",
+  "short_name": "Łączyński Portfolio",
+  "description": "Professional portfolio of Damian Łączyński, experienced Fullstack Developer specializing in .NET and Angular",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
