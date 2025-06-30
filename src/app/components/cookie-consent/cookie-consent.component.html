@@ -1,0 +1,55 @@
+<div class="cookie-banner" [class.show]="showBanner" *ngIf="showBanner">
+  <div class="cookie-content">
+    <div class="cookie-scroll-area">
+      <div class="cookie-header">
+        <h3>🍪 Cookie Settings</h3>
+      </div>
+
+      <div class="cookie-text">
+        <p>
+          This site uses cookies to analyze traffic and improve functionality.
+          You can choose which cookies to accept.
+        </p>
+      </div>
+
+      <div class="cookie-details" [class.show]="showDetails">
+        <div class="cookie-categories">
+          <div class="cookie-category">
+            <div class="category-header">
+              <h4>⚙️ Essential</h4>
+              <span class="status required">Required</span>
+            </div>
+            <p>
+              Essential for site functionality - navigation, security and core
+              features.
+            </p>
+          </div>
+
+          <div class="cookie-category">
+            <div class="category-header">
+              <h4>📈 Analytics</h4>
+              <span class="status optional">Optional</span>
+            </div>
+            <p>
+              Google Analytics - helps analyze traffic and improve the site.
+              Data is anonymized.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cookie-actions">
+        <button class="btn-details" (click)="toggleDetails()">
+          {{ showDetails ? "Hide Details" : "Show Details" }}
+        </button>
+
+        <div class="action-buttons">
+          <button class="btn-necessary" (click)="acceptNecessaryOnly()">
+            Essential Only
+          </button>
+          <button class="btn-accept" (click)="acceptAll()">Accept All</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

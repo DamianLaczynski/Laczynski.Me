@@ -8,6 +8,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GitHubProjectsComponent } from './components/github-projects/github-projects.component';
+import { CookieConsentComponent } from './components/cookie-consent/cookie-consent.component';
 import { AnalyticsService } from './shared/analytics.service';
 
 @Component({
@@ -22,6 +23,7 @@ import { AnalyticsService } from './shared/analytics.service';
     ContactComponent,
     FooterComponent,
     GitHubProjectsComponent,
+    CookieConsentComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -33,7 +35,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   constructor(private analytics: AnalyticsService) {}
 
   ngOnInit() {
-    // Track initial page load
+    // Track initial page load only if user has consented
     this.analytics.trackPage('Portfolio - Damian Łączyński', '/');
 
     // Initialize scroll animations after view is loaded

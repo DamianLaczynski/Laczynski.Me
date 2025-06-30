@@ -14,18 +14,32 @@ export class AnalyticsService {
     eventLabel?: string,
     value?: number
   ) {
-    gtag('event', eventAction, {
-      event_category: eventCategory,
-      event_label: eventLabel,
-      value: value,
-    });
+    // Sprawdź zgodę przed śledzeniem
+    if (!this.hasAnalyticsConsent()) {
+      return;
+    }
+
+    if (typeof gtag !== 'undefined') {
+      gtag('event', eventAction, {
+        event_category: eventCategory,
+        event_label: eventLabel,
+        value: value,
+      });
+    }
   }
 
   public trackPage(pageTitle: string, pagePath: string) {
-    gtag('config', 'G-LRDENHDNV3', {
-      page_title: pageTitle,
-      page_path: pagePath,
-    });
+    // Sprawdź zgodę przed śledzeniem
+    if (!this.hasAnalyticsConsent()) {
+      return;
+    }
+
+    if (typeof gtag !== 'undefined') {
+      gtag('config', 'G-LRDENHDNV3', {
+        page_title: pageTitle,
+        page_path: pagePath,
+      });
+    }
   }
 
   public trackContact(method: string) {
@@ -42,5 +56,16 @@ export class AnalyticsService {
 
   public trackExternalLink(url: string, linkName: string) {
     this.trackEvent('click', 'external_link', `${linkName} - ${url}`);
+  }
+
+  private hasAnalyticsConsent(): boolean {
+    const consent = localStorage.getItem('cookie-consent');
+    if (!consent) return false;
+    try {
+      const parsed = JSON.parse(consent);
+      return parsed.analytics === true;
+    } catch {
+      return false;
+    }
   }
 }
