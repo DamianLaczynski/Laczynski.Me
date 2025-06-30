@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://damian.laczynski.dev/sitemap.xml
+Sitemap: https://laczynski.dev/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
