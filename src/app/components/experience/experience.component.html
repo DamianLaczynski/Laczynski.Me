@@ -5,12 +5,18 @@
     <h2
       class="section-heading heading-hero animate-fade-in-left animate-delay-100"
     >
-      Professional<br />Experience
+      {{ "experience.title" | translate }}<br />{{
+        "experience.title_break" | translate
+      }}
     </h2>
 
     <div class="ExperienceCompany animate-fade-in-left animate-delay-200">
-      <h3 class="CompanyName text-contact">Net PC</h3>
-      <p class="CompanyDuration text-contact">2024 – Present</p>
+      <h3 class="CompanyName text-contact">
+        {{ "experience.company" | translate }}
+      </h3>
+      <p class="CompanyDuration text-contact">
+        {{ "experience.duration" | translate }}
+      </p>
     </div>
 
     <div
@@ -18,19 +24,19 @@
     >
       <ul class="custom-list">
         <li class="animate-fade-in-up animate-delay-400">
-          Fullstack Developer
+          {{ "experience.roles.fullstack_developer" | translate }}
         </li>
         <li class="animate-fade-in-up animate-delay-500">
-          Web applications with APIs and databases
+          {{ "experience.roles.web_applications" | translate }}
         </li>
         <li class="animate-fade-in-up animate-delay-600">
-          CI/CD automation and process optimization
+          {{ "experience.roles.ci_cd" | translate }}
         </li>
         <li class="animate-fade-in-up animate-delay-700">
-          Complex data processing and visualization
+          {{ "experience.roles.data_processing" | translate }}
         </li>
         <li class="animate-fade-in-up animate-delay-800">
-          Dynamic forms and mapping solutions
+          {{ "experience.roles.dynamic_forms" | translate }}
         </li>
       </ul>
     </div>

@@ -5,15 +5,13 @@
     <h2
       class="section-heading heading-primary animate-fade-in-left animate-delay-100"
     >
-      Explore My Projects
+      {{ "github_projects.title" | translate }}
     </h2>
 
     <p
       class="ProjectsDescription text-body animate-fade-in-left animate-delay-200"
     >
-      Take a look at my GitHub to see the projects I've worked on — from backend
-      APIs to fullstack web applications. Each repository reflects my commitment
-      to clean code, modern technologies, and continuous learning.
+      {{ "github_projects.description" | translate }}
     </p>
 
     <a
@@ -24,7 +22,9 @@
       (click)="onGitHubProjectsClick()"
     >
       <div class="btn__content">
-        <div class="btn__text text-button">All Projects on GitHub</div>
+        <div class="btn__text text-button">
+          {{ "github_projects.button" | translate }}
+        </div>
       </div>
     </a>
   </div>

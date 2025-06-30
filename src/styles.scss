@@ -400,6 +400,12 @@ body {
   }
 }
 
+@media (max-width: 375px) {
+  .btn__text {
+    font-size: 0.8rem;
+  }
+}
+
 /* Common graphic sizing patterns */
 .graphic--large {
   width: 100%;

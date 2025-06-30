@@ -2,13 +2,12 @@
   <div class="cookie-content">
     <div class="cookie-scroll-area">
       <div class="cookie-header">
-        <h3>🍪 Cookie Settings</h3>
+        <h3>🍪 {{ "cookies.title" | translate }}</h3>
       </div>
 
       <div class="cookie-text">
         <p>
-          This site uses cookies to analyze traffic and improve functionality.
-          You can choose which cookies to accept.
+          {{ "cookies.description" | translate }}
         </p>
       </div>
 
@@ -16,23 +15,25 @@
         <div class="cookie-categories">
           <div class="cookie-category">
             <div class="category-header">
-              <h4>⚙️ Essential</h4>
-              <span class="status required">Required</span>
+              <h4>⚙️ {{ "cookies.essential.title" | translate }}</h4>
+              <span class="status required">{{
+                "cookies.essential.status" | translate
+              }}</span>
             </div>
             <p>
-              Essential for site functionality - navigation, security and core
-              features.
+              {{ "cookies.essential.description" | translate }}
             </p>
           </div>
 
           <div class="cookie-category">
             <div class="category-header">
-              <h4>📈 Analytics</h4>
-              <span class="status optional">Optional</span>
+              <h4>📈 {{ "cookies.analytics.title" | translate }}</h4>
+              <span class="status optional">{{
+                "cookies.analytics.status" | translate
+              }}</span>
             </div>
             <p>
-              Google Analytics - helps analyze traffic and improve the site.
-              Data is anonymized.
+              {{ "cookies.analytics.description" | translate }}
             </p>
           </div>
         </div>
@@ -40,14 +41,20 @@
 
       <div class="cookie-actions">
         <button class="btn-details" (click)="toggleDetails()">
-          {{ showDetails ? "Hide Details" : "Show Details" }}
+          {{
+            showDetails
+              ? ("cookies.hide_details" | translate)
+              : ("cookies.show_details" | translate)
+          }}
         </button>
 
         <div class="action-buttons">
           <button class="btn-necessary" (click)="acceptNecessaryOnly()">
-            Essential Only
+            {{ "cookies.essential_only" | translate }}
           </button>
-          <button class="btn-accept" (click)="acceptAll()">Accept All</button>
+          <button class="btn-accept" (click)="acceptAll()">
+            {{ "cookies.accept_all" | translate }}
+          </button>
         </div>
       </div>
     </div>

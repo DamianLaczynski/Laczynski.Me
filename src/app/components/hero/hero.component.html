@@ -14,23 +14,35 @@
       <h1 class="animate-fade-in-up">
         <span
           class="HeroTitle heading-primary hero-title-fullstack animate-delay-100"
-          >Fullstack</span
+          >{{ "hero.fullstack" | translate }}</span
         >
         <br />
-        <span class="HeroTitle heading-primary animate-delay-200"
-          >Developer</span
-        >
+        <span class="HeroTitle heading-primary animate-delay-200">{{
+          "hero.developer" | translate
+        }}</span>
       </h1>
 
       <div class="HeroDescription animate-fade-in-up animate-delay-300">
         <p class="text-span">
           <span class="text-span text-span-orange">&lt;p&gt;</span>
-          <span class="text-span">Building </span>
-          <span class="text-span-bold">scalable</span>
-          <span class="text-span"> web solutions with </span>
-          <span class="text-span-bold">clean architecture</span>
-          <span class="text-span"> and </span>
-          <span class="text-span-bold">modern technologies</span>
+          <span class="text-span"
+            >{{ "hero.description.building" | translate }}
+          </span>
+          <span class="text-span-bold">{{
+            "hero.description.scalable" | translate
+          }}</span>
+          <span class="text-span">
+            {{ "hero.description.web_solutions" | translate }}
+          </span>
+          <span class="text-span-bold">{{
+            "hero.description.clean_architecture" | translate
+          }}</span>
+          <span class="text-span">
+            {{ "hero.description.and" | translate }}
+          </span>
+          <span class="text-span-bold">{{
+            "hero.description.modern_technologies" | translate
+          }}</span>
           <span class="text-span">.</span>
           <span class="text-span text-span-orange">&lt;/p&gt;</span>
         </p>
@@ -38,13 +50,21 @@
         <p class="text-span">
           <span class="text-span text-span-orange">&lt;p&gt;</span>
           <span class="text-span"
-            >Specializing in .NET and Angular development, with a passion for
+            >{{ "hero.description.specializing" | translate }}
           </span>
-          <span class="text-span-bold">clean code</span>
+          <span class="text-span-bold">{{
+            "hero.description.clean_code" | translate
+          }}</span>
           <span class="text-span">, </span>
-          <span class="text-span-bold">proper architecture</span>
-          <span class="text-span">, and </span>
-          <span class="text-span-bold">team collaboration</span>
+          <span class="text-span-bold">{{
+            "hero.description.proper_architecture" | translate
+          }}</span>
+          <span class="text-span">
+            {{ "hero.description.and" | translate }}
+          </span>
+          <span class="text-span-bold">{{
+            "hero.description.team_collaboration" | translate
+          }}</span>
           <span class="text-span">.</span>
           <span class="text-span text-span-orange">&lt;/p&gt;</span>
         </p>
@@ -52,7 +72,9 @@
 
       <a href="#contact" class="ContactButton btn btn--orange">
         <div class="btn__content">
-          <div class="btn__text text-button">Get in Touch</div>
+          <div class="btn__text text-button">
+            {{ "hero.get_in_touch" | translate }}
+          </div>
         </div>
       </a>
     </div>

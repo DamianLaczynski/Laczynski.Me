@@ -9,7 +9,9 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GitHubProjectsComponent } from './components/github-projects/github-projects.component';
 import { CookieConsentComponent } from './components/cookie-consent/cookie-consent.component';
+import { LanguageSwitcherComponent } from './components/language-switcher/language-switcher.component';
 import { AnalyticsService } from './shared/analytics.service';
+import { I18nService } from './shared/i18n.service';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +26,7 @@ import { AnalyticsService } from './shared/analytics.service';
     FooterComponent,
     GitHubProjectsComponent,
     CookieConsentComponent,
+    LanguageSwitcherComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -32,13 +35,14 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewInit {
   title = 'Laczynski.Me';
   private intersectionObserver?: IntersectionObserver;
 
-  constructor(private analytics: AnalyticsService) {}
+  constructor(private analytics: AnalyticsService, private i18n: I18nService) {}
 
   ngOnInit() {
     // Track initial page load only if user has consented
     this.analytics.trackPage('Portfolio - Damian Łączyński', '/');
 
-    // Initialize scroll animations after view is loaded
+    // Initialize i18n service
+    // Service automatically loads saved language preference
   }
 
   ngAfterViewInit() {

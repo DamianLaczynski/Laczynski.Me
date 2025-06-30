@@ -1,0 +1,19 @@
+<div class="LanguageSwitcher">
+  <button
+    class="LanguageButton"
+    [class.active]="currentLanguage === 'en'"
+    (click)="switchLanguage('en')"
+    aria-label="Switch to English"
+  >
+    EN
+  </button>
+  <div class="LanguageDivider"></div>
+  <button
+    class="LanguageButton"
+    [class.active]="currentLanguage === 'pl'"
+    (click)="switchLanguage('pl')"
+    aria-label="Przełącz na polski"
+  >
+    PL
+  </button>
+</div>

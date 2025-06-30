@@ -1,0 +1,108 @@
+{
+  "nav": {
+    "experience": "Doświadczenie",
+    "projects": "Projekty",
+    "me": "O mnie",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "fullstack": "Fullstack",
+    "developer": "Developer",
+    "description": {
+      "building": "Tworzę",
+      "scalable": "skalowalne",
+      "web_solutions": "rozwiązania webowe z",
+      "clean_architecture": "czystą architekturą",
+      "and": "i",
+      "modern_technologies": "nowoczesnymi technologiami",
+      "specializing": "Specjalizuję się w rozwoju .NET i Angular, z pasją do",
+      "clean_code": "czystego kodu",
+      "proper_architecture": "właściwej architektury",
+      "team_collaboration": "współpracy zespołowej"
+    },
+    "get_in_touch": "Skontaktuj się"
+  },
+  "experience": {
+    "title": "Doświadczenie",
+    "title_break": "Zawodowe",
+    "company": "Net PC",
+    "duration": "2024 – obecnie",
+    "roles": {
+      "fullstack_developer": "Fullstack Developer",
+      "web_applications": "Aplikacje webowe z API i bazami danych",
+      "ci_cd": "Automatyzacja CI/CD i optymalizacja procesów",
+      "data_processing": "Złożone przetwarzanie i wizualizacja danych",
+      "dynamic_forms": "Dynamiczne formularze i rozwiązania mapowe"
+    }
+  },
+  "projects": {
+    "featured_projects": "Wyróżnione Projekty",
+    "archi": {
+      "title": "Archi",
+      "ai_powered": "Zarządzanie Projektami z AI",
+      "learning_project": "Projekt edukacyjny eksplorujący filozofię Human-in-the-Loop AI",
+      "tech_stack": ".NET 9 + Angular 19",
+      "microservices": "Architektura mikroserwisów",
+      "ai_integration": "Integracja AI (w rozwoju)"
+    },
+    "magjob": {
+      "title": "MagJob",
+      "enterprise": "Zarządzanie Organizacją Enterprise",
+      "complete_solution": "Kompletne rozwiązanie mikroserwisowe z zaawansowanymi funkcjami",
+      "microservices_count": "8 mikroserwisów + Clean Architecture",
+      "nfc_integration": "Integracja NFC i Google Calendar API",
+      "realtime": "Współpraca w czasie rzeczywistym"
+    },
+    "commercial": {
+      "title": "Projekty Komercyjne",
+      "web_applications": "Aplikacje Webowe w Net PC",
+      "excel_migrations": "Migracje Excel-to-web i systemy przetwarzania danych",
+      "dynamic_forms": "Dynamiczne formularze i mapy",
+      "azure_integration": "Integracja z Azure",
+      "performance": "Optymalizacja wydajności"
+    }
+  },
+  "github_projects": {
+    "title": "Odkryj Moje Projekty",
+    "description": "Sprawdź mój GitHub, aby zobaczyć projekty nad którymi pracowałem — od backend API po fullstack aplikacje webowe. Każde repozytorium odzwierciedla moje zaangażowanie w czysty kod, nowoczesne technologie i ciągłe uczenie się.",
+    "button": "Wszystkie Projekty na GitHub"
+  },
+  "innovation": {
+    "title": "Napędzam",
+    "title_break": "Innowacje",
+    "description": {
+      "intro": "Jestem oddanym Fullstack Developerem z 1 rokiem doświadczenia zawodowego w Net PC, gdzie rozwijam złożone aplikacje webowe i systemy przetwarzania danych.",
+      "what_drives": "Co mnie motywuje:",
+      "team_mentality": "Mentalność zespołowa i pozytywna współpraca",
+      "clean_code": "Czysty kod i odpowiednia architektura",
+      "automation": "Automatyzacja procesów i ciągłe doskonalenie",
+      "communication": "Szczera komunikacja o rozwoju i nauce",
+      "ai_exploration": "Obecnie eksploruję integrację AI poprzez praktyczne projekty edukacyjne, jednocześnie utrzymując silne fundamenty w nowoczesnym rozwoju webowym."
+    }
+  },
+  "contact": {
+    "title": "Stwórzmy Coś Wspaniałego",
+    "description": "Gotowy na współpracę przy Twoim następnym projekcie? Zawsze chętnie omawiam nowe możliwości i wymagające projekty. Niezależnie od tego, czy potrzebujesz oddanego członka zespołu, czy ekspertyzy w nowoczesnym rozwoju webowym, nawiążmy kontakt!"
+  },
+  "footer": {
+    "rights": "2025 | Damian Łączyński | Wszelkie prawa zastrzeżone"
+  },
+  "cookies": {
+    "title": "Ustawienia Cookies",
+    "description": "Ta strona używa plików cookie do analizy ruchu i poprawy funkcjonalności. Możesz wybrać, które pliki cookie akceptować.",
+    "essential": {
+      "title": "Niezbędne",
+      "status": "Wymagane",
+      "description": "Niezbędne dla funkcjonalności strony - nawigacja, bezpieczeństwo i podstawowe funkcje."
+    },
+    "analytics": {
+      "title": "Analityczne",
+      "status": "Opcjonalne", 
+      "description": "Google Analytics - pomaga analizować ruch i ulepszać stronę. Dane są anonimizowane."
+    },
+    "show_details": "Pokaż Szczegóły",
+    "hide_details": "Ukryj Szczegóły",
+    "essential_only": "Tylko Niezbędne",
+    "accept_all": "Akceptuj Wszystkie"
+  }
+} 

@@ -1,0 +1,108 @@
+{
+  "nav": {
+    "experience": "Experience",
+    "projects": "Projects",
+    "me": "Me",
+    "contact": "Contact"
+  },
+  "hero": {
+    "fullstack": "Fullstack",
+    "developer": "Developer",
+    "description": {
+      "building": "Building",
+      "scalable": "scalable",
+      "web_solutions": "web solutions with",
+      "clean_architecture": "clean architecture",
+      "and": "and",
+      "modern_technologies": "modern technologies",
+      "specializing": "Specializing in .NET and Angular development, with a passion for",
+      "clean_code": "clean code",
+      "proper_architecture": "proper architecture",
+      "team_collaboration": "team collaboration"
+    },
+    "get_in_touch": "Get in Touch"
+  },
+  "experience": {
+    "title": "Professional",
+    "title_break": "Experience",
+    "company": "Net PC",
+    "duration": "2024 – Present",
+    "roles": {
+      "fullstack_developer": "Fullstack Developer",
+      "web_applications": "Web applications with APIs and databases",
+      "ci_cd": "CI/CD automation and process optimization",
+      "data_processing": "Complex data processing and visualization",
+      "dynamic_forms": "Dynamic forms and mapping solutions"
+    }
+  },
+  "projects": {
+    "featured_projects": "Featured Projects",
+    "archi": {
+      "title": "Archi",
+      "ai_powered": "AI-Powered Project Management",
+      "learning_project": "Learning project exploring Human-in-the-Loop AI philosophy",
+      "tech_stack": ".NET 9 + Angular 19",
+      "microservices": "Microservices architecture",
+      "ai_integration": "AI integration (in development)"
+    },
+    "magjob": {
+      "title": "MagJob",
+      "enterprise": "Enterprise Organization Management",
+      "complete_solution": "Complete microservices solution with advanced features",
+      "microservices_count": "8 microservices + Clean Architecture",
+      "nfc_integration": "NFC integration & Google Calendar API",
+      "realtime": "Real-time collaboration"
+    },
+    "commercial": {
+      "title": "Commercial Projects",
+      "web_applications": "Web Applications at Net PC",
+      "excel_migrations": "Excel-to-web migrations and data processing systems",
+      "dynamic_forms": "Dynamic forms & mapping",
+      "azure_integration": "Azure integration",
+      "performance": "Performance optimization"
+    }
+  },
+  "github_projects": {
+    "title": "Explore My Projects",
+    "description": "Take a look at my GitHub to see the projects I've worked on — from backend APIs to fullstack web applications. Each repository reflects my commitment to clean code, modern technologies, and continuous learning.",
+    "button": "All Projects on GitHub"
+  },
+  "innovation": {
+    "title": "Powering",
+    "title_break": "Innovation",
+    "description": {
+      "intro": "I'm a dedicated Fullstack Developer with 1 year of professional experience at Net PC, where I develop complex web applications and data processing systems.",
+      "what_drives": "What drives me:",
+      "team_mentality": "Team-first mentality and positive collaboration",
+      "clean_code": "Clean code and appropriate architecture",
+      "automation": "Process automation and continuous improvement",
+      "communication": "Honest communication about growth and learning",
+      "ai_exploration": "Currently exploring AI integration through hands-on learning projects while maintaining strong fundamentals in modern web development."
+    }
+  },
+  "contact": {
+    "title": "Let's Build Something Great",
+    "description": "Ready to collaborate on your next project? I'm always excited to discuss new opportunities and challenging projects. Whether you need a dedicated team member or expertise in modern web development, let's connect!"
+  },
+  "footer": {
+    "rights": "2025 | Damian Łączyński | All Rights Reserved"
+  },
+  "cookies": {
+    "title": "Cookie Settings",
+    "description": "This site uses cookies to analyze traffic and improve functionality. You can choose which cookies to accept.",
+    "essential": {
+      "title": "Essential",
+      "status": "Required",
+      "description": "Essential for site functionality - navigation, security and core features."
+    },
+    "analytics": {
+      "title": "Analytics",
+      "status": "Optional",
+      "description": "Google Analytics - helps analyze traffic and improve the site. Data is anonymized."
+    },
+    "show_details": "Show Details",
+    "hide_details": "Hide Details",
+    "essential_only": "Essential Only",
+    "accept_all": "Accept All"
+  }
+} 

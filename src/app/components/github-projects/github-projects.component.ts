@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { AnalyticsService } from '../../shared/analytics.service';
+import { TranslatePipe } from '../../shared/translate.pipe';
 
 @Component({
   selector: 'app-github-projects',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './github-projects.component.html',
   styleUrl: './github-projects.component.scss',
 })
